@@ -8,7 +8,7 @@ public class TestUserRegistration {
     @Test
     public void givenAPasswordPatternWhenMatchedShouldReturnTrue(){
         UserRegistration user = new UserRegistration();
-        boolean password = user.checkPassword("Xxxxxxxx");
+        boolean password = user.checkPassword("Xxxxxxx9");
         Assert.assertTrue(password);
     }
 }
