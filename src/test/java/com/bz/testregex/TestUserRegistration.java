@@ -31,12 +31,11 @@ public class TestUserRegistration {
     public static Collection input() {
         return Arrays.asList(new Object[][]{{true, "abc.zxy@yahoo.com.in"}, {true, "abc.100@yahoo.com"},
                 {true, "abc111@abc.com"}, {true, "abc-100@yahoo.net"}, {true, "abc.100@abc.com.au"}, {true, "abc@gmail.com.com"},
-                {true, "abc@.com.my"}, {false, "abc()*@gmail.com"}, {false, ".abc@abc.com"},{false,".abc@abc.com"}});
+                {true, "abc@.com.my"}, {false, "abc()*@gmail.com"}, {false, ".abc@abc.com"}, {false, ".abc@abc.com"}});
     }
 
     @Test
     public void givenAEmailPatternWhenMatchedShouldReturnTrue() {
-        UserRegistration user = new UserRegistration();
         Assert.assertEquals(expected_Result, user.emailCheck(email));
     }
 
